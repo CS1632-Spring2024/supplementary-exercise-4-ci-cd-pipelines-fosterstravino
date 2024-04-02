@@ -1,17 +1,16 @@
 package edu.pitt.cs;
 
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
-import org.junit.FixMethodOrder;
-import org.junit.runners.MethodSorters;
 import static org.junit.Assert.*;
-
-import org.mockito.Mockito;
-import static org.mockito.Mockito.*;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.FixMethodOrder;
+import org.junit.runners.MethodSorters;
+import org.mockito.*;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class RentACatUnitTest {
@@ -41,19 +40,19 @@ public class RentACatUnitTest {
 		// Passing InstanceType.IMPL as the first parameter will create a real RentACat object using your RentACatImpl implementation.
 		// Passing InstanceType.MOCK as the first parameter will create a mock RentACat object using Mockito.
 		// Which type is the correct choice for this unit test?  I'll leave it up to you.  The answer is in the Unit Testing Part 2 lecture. :)
-		// TODO: Fill in
+		r = Mockito.mock(RentACat.class);
 
 		// 2. Create a Cat with ID 1 and name "Jennyanydots", assign to c1 using a call to Cat.createInstance(InstanceType, int, String).
 		// Passing InstanceType.IMPL as the first parameter will create a real cat using your CatImpl implementation.
 		// Passing InstanceType.MOCK as the first parameter will create a mock cat using Mockito.
 		// Which type is the correct choice for this unit test?  Again, I'll leave it up to you.
-		// TODO: Fill in
+		r = Cat.createInstance(InstanceType.IMPL, 1, "Jennyanydots");
 
 		// 3. Create a Cat with ID 2 and name "Old Deuteronomy", assign to c2 using a call to Cat.createInstance(InstanceType, int, String).
-		// TODO: Fill in
+		r = Cat.createInstance(InstanceType.IMPL, 2, "Old Deuteronomy");
 
 		// 4. Create a Cat with ID 3 and name "Mistoffelees", assign to c3 using a call to Cat.createInstance(InstanceType, int, String).
-		// TODO: Fill in
+		r = Cat.createInstance(InstanceType.IMPL, 3, "Mistoffelees");
 
 		// 5. Redirect system output from stdout to the "out" stream
 		// First, make a back up of System.out (which is the stdout to the console)
