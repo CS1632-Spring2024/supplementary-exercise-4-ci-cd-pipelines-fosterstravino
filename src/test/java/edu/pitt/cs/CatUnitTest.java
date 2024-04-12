@@ -30,8 +30,7 @@ public class CatUnitTest {
 		// Passing InstanceType.IMPL as the first parameter will create a real cat using your CatImpl implementation.
 		// Passing InstanceType.MOCK as the first parameter will create a mock cat using Mockito.
 		// Which type is the correct choice for this unit test?  I'll leave it up to you.  The answer is in the Unit Testing Part 2 lecture. :)
-		// TODO: Fill in
-		c = Mockito.mock(Cat.class);
+		
 		c = Cat.createInstance(InstanceType.IMPL, 1, "Jennyanydots");
 	}
 

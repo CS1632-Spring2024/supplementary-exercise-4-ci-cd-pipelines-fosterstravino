@@ -11,6 +11,7 @@ public class CatImpl implements Cat {
 	public CatImpl(int id, String name) {
 		_id = id;
 		_name = name;
+		_rented = false;
 	}
 
 	/**
