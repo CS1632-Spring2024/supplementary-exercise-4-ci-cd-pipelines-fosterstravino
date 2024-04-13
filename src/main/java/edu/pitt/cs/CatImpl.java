@@ -2,31 +2,30 @@ package edu.pitt.cs;
 
 public class CatImpl implements Cat {
 
-	// TODO: Fill in with member variables
-	int catID;
-	String catName;
-	boolean rented = false;
+	private boolean _rented;
+	private String _name;
+	private int _id;
+	
+	
 
 	public CatImpl(int id, String name) {
-		// TODO: Fill in
-		catID = id;
-		catName = name;
+		_id = id;
+		_name = name;
+		_rented = false;
 	}
 
 	/**
 	 * Rent cat. Simply sets the _rented flag to true.
 	 */
 	public void rentCat() {
-		// TODO: Fill in
-		rented = true;
+		_rented = true;
 	}
 
 	/**
 	 * Return cat. Simply sets the _rented flag to false.
 	 */
 	public void returnCat() {
-		// TODO: Fill in
-		rented = false;
+		_rented = false;
 	}
 
 	/**
@@ -35,8 +34,7 @@ public class CatImpl implements Cat {
 	 * @param String name New name of the cat
 	 */
 	public void renameCat(String name) {
-		// TODO: Fill in
-		catName = name;
+		_name = name;
 	}
 
 	/**
@@ -46,8 +44,7 @@ public class CatImpl implements Cat {
 	 */
 
 	public String getName() {
-		// TODO: Fill in
-		return catName;
+		return _name;
 	}
 
 	/**
@@ -57,8 +54,7 @@ public class CatImpl implements Cat {
 	 */
 
 	public int getId() {
-		// TODO: Fill in
-		return catID;
+		return _id;
 	}
 
 	/**
@@ -68,8 +64,7 @@ public class CatImpl implements Cat {
 	 */
 
 	public boolean getRented() {
-		// TODO: Fill in
-		return rented;
+		return _rented;
 	}
 
 	/**
@@ -80,8 +75,7 @@ public class CatImpl implements Cat {
 	 */
 
 	public String toString() {
-		// TODO: Fill in
-		return "ID " + catID + ". " + catName;
+		return "ID " + _id + ". " + _name;
 	}
 
 }
